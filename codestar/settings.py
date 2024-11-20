@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-willwhyd-djangoblog01-0so900tk24d.ws.codeinstitute-ide.net',
                 '8000-willwhyd-djangoblog01-fqxws7twq65.ws.codeinstitute-ide.net',
