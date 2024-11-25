@@ -18,6 +18,12 @@ def post_detail(request, slug):
     **Context**
     ``post``
         An instance of :model:`blog.Post`
+    ``comments``
+        All approved comments related to the post
+    ``comment_count`` 
+        A count of approved comments related to the post
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`
     
     **Template:""
     :template:`blog/post_detail.html`
@@ -56,7 +62,15 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to eddit comments
+    Display an individual comment for edits
+    
+     **Context**
+    ``post``
+        An instance of :model:`blog.Post`
+    ``comments``
+        All approved comments related to the post
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`
     """
     if request.method == "POST":
         queryset = Post.objects.filter(status=1)
